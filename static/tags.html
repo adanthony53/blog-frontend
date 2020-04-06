@@ -46,46 +46,42 @@
     </div>
     <!-- all types -->
     <div class="ui attached segment m-padded-tb-large">
-      <div class="ui labeled button m-margin-tb-tiny">
-        <a href="#" class="ui basic teal button">Critical Thinking</a>
-        <div class="ui basic teal left pointing label">99</div>
-      </div>
-      <div class="ui labeled button m-margin-tb-tiny">
-        <a href="#" class="ui basic button">Critical Thinking</a>
-        <div class="ui basic left pointing label">99</div>
-      </div>
-      <div class="ui labeled button m-margin-tb-tiny">
-        <a href="#" class="ui basic button">Critical Thinking</a>
-        <div class="ui basic left pointing label">99</div>
-      </div>
-      <div class="ui labeled button m-margin-tb-tiny">
-        <a href="#" class="ui basic button">Critical Thinking</a>
-        <div class="ui basic left pointing label">99</div>
-      </div>
-      <div class="ui labeled button m-margin-tb-tiny">
-        <a href="#" class="ui basic button">Critical Thinking</a>
-        <div class="ui basic left pointing label">99</div>
-      </div>
-      <div class="ui labeled button m-margin-tb-tiny">
-        <a href="#" class="ui basic button">Critical Thinking</a>
-        <div class="ui basic left pointing label">99</div>
-      </div>
-      <div class="ui labeled button m-margin-tb-tiny">
-        <a href="#" class="ui basic  button">Critical Thinking</a>
-        <div class="ui basic left pointing label">99</div>
-      </div>
-      <div class="ui labeled button m-margin-tb-tiny">
-        <a href="#" class="ui basic button">Critical Thinking</a>
-        <div class="ui basic left pointing label">99</div>
-      </div>
-      <div class="ui labeled button m-margin-tb-tiny">
-        <a href="#" class="ui basic  button">Critical Thinking</a>
-        <div class="ui basic left pointing label">99</div>
-      </div>
-      <div class="ui labeled button m-margin-tb-tiny">
-        <a href="#" class="ui basic button">Critical Thinking</a>
-        <div class="ui basic left pointing label">99</div>
-      </div>
+      <a href="#" target="_blank" class="ui teal basic left pointing large label m-margin-tb-tiny">
+        Java <div class="detail">99</div>
+      </a>
+      <a href="#" target="_blank" class="ui basic left pointing large label m-margin-tb-tiny">
+        Java <div class="detail">99</div>
+      </a>
+      <a href="#" target="_blank" class="ui basic left pointing large label m-margin-tb-tiny">
+        Java <div class="detail">99</div>
+      </a>
+      <a href="#" target="_blank" class="ui basic left pointing large label m-margin-tb-tiny">
+        Java <div class="detail">99</div>
+      </a>
+      <a href="#" target="_blank" class="ui basic left pointing large label m-margin-tb-tiny">
+        Java <div class="detail">99</div>
+      </a>
+      <a href="#" target="_blank" class="ui basic left pointing large label m-margin-tb-tiny">
+        Java <div class="detail">99</div>
+      </a>
+      <a href="#" target="_blank" class="ui basic left pointing large label m-margin-tb-tiny">
+        Java <div class="detail">99</div>
+      </a>
+      <a href="#" target="_blank" class="ui basic left pointing large label m-margin-tb-tiny">
+        Java <div class="detail">99</div>
+      </a>
+      <a href="#" target="_blank" class="ui basic left pointing large label m-margin-tb-tiny">
+        Java <div class="detail">99</div>
+      </a>
+      <a href="#" target="_blank" class="ui basic left pointing large label m-margin-tb-tiny">
+        Java <div class="detail">99</div>
+      </a>
+      <a href="#" target="_blank" class="ui basic left pointing large label m-margin-tb-tiny">
+        Java <div class="detail">99</div>
+      </a>
+      <a href="#" target="_blank" class="ui basic left pointing large label m-margin-tb-tiny">
+        Java <div class="detail">99</div>
+      </a>
     </div>
 
     <!-- article -->
@@ -96,28 +92,35 @@
             <h3 class="ui header">啊这。。你真的理解什么是财富自由吗</h3>
             <p class="m-text" th:text="|${blog.description}......|">风神了封神了，入魔了，魔怔了，正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
             <div class="ui stackable grid">
-              <div class="eleven wide column">
-                <div class="ui mini horizontal link list">
-                  <div class="item">
-                    <img src="../static/images/icon.png" alt="" class="ui avatar image">
-                  </div>
-                  <div class="item">
-                    <div class="content">
-                      <a href="#" class="header" th:text="${blog.user.nickname}">汪峰</a>
+              <div class="row">
+                <div class="eleven wide column">
+                  <div class="ui mini horizontal link list">
+                    <div class="item">
+                      <img src="../static/images/icon.png" alt="" class="ui avatar image">
+                    </div>
+                    <div class="item">
+                      <div class="content">
+                        <a href="#" class="header" th:text="${blog.user.nickname}">汪峰</a>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <i class="calendar icon"></i> 2020-04-01
+                    </div>
+                    <div class="item">
+                      <i class="eye icon"></i> 6324
                     </div>
                   </div>
-                  <div class="item">
-                    <i class="calendar icon"></i> 2020-04-01
-                  </div>
-                  <div class="item">
-                    <i class="eye icon"></i> 6324
-                  </div>
+                </div>
+                <div class="right aligned five wide column">
+                  <a href="#" target="_blank" class="ui teal label basic m-padded-tiny m-text-thin" th:text="${blog.type.name}">
+                    烈马人
+                  </a>
                 </div>
               </div>
-              <div class="right aligned five wide column">
-                <a href="#" target="_blank" class="ui teal label basic m-padded-tiny m-text-thin" th:text="${blog.type.name}">
-                  烈马人
-                </a>
+              <div class="row">
+                <div class="column">
+                  <a href="#" class="ui mini basic teal left pointing label m-padded-mini m-text-thin">Java</a>
+                </div>
               </div>
             </div>
           </div>
@@ -134,28 +137,35 @@
             <h3 class="ui header">啊这。。你真的理解什么是财富自由吗</h3>
             <p class="m-text" th:text="|${blog.description}......|">风神了封神了，入魔了，魔怔了，正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
             <div class="ui stackable grid">
-              <div class="eleven wide column">
-                <div class="ui mini horizontal link list">
-                  <div class="item">
-                    <img src="../static/images/icon.png" alt="" class="ui avatar image">
-                  </div>
-                  <div class="item">
-                    <div class="content">
-                      <a href="#" class="header" th:text="${blog.user.nickname}">汪峰</a>
+              <div class="row">
+                <div class="eleven wide column">
+                  <div class="ui mini horizontal link list">
+                    <div class="item">
+                      <img src="../static/images/icon.png" alt="" class="ui avatar image">
+                    </div>
+                    <div class="item">
+                      <div class="content">
+                        <a href="#" class="header" th:text="${blog.user.nickname}">汪峰</a>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <i class="calendar icon"></i> 2020-04-01
+                    </div>
+                    <div class="item">
+                      <i class="eye icon"></i> 6324
                     </div>
                   </div>
-                  <div class="item">
-                    <i class="calendar icon"></i> 2020-04-01
-                  </div>
-                  <div class="item">
-                    <i class="eye icon"></i> 6324
-                  </div>
+                </div>
+                <div class="right aligned five wide column">
+                  <a href="#" target="_blank" class="ui teal label basic m-padded-tiny m-text-thin" th:text="${blog.type.name}">
+                    烈马人
+                  </a>
                 </div>
               </div>
-              <div class="right aligned five wide column">
-                <a href="#" target="_blank" class="ui teal label basic m-padded-tiny m-text-thin" th:text="${blog.type.name}">
-                  烈马人
-                </a>
+              <div class="row">
+                <div class="column">
+                  <a href="#" class="ui mini basic teal left pointing label m-padded-mini m-text-thin">Java</a>
+                </div>
               </div>
             </div>
           </div>
@@ -172,28 +182,35 @@
             <h3 class="ui header">啊这。。你真的理解什么是财富自由吗</h3>
             <p class="m-text" th:text="|${blog.description}......|">风神了封神了，入魔了，魔怔了，正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
             <div class="ui stackable grid">
-              <div class="eleven wide column">
-                <div class="ui mini horizontal link list">
-                  <div class="item">
-                    <img src="../static/images/icon.png" alt="" class="ui avatar image">
-                  </div>
-                  <div class="item">
-                    <div class="content">
-                      <a href="#" class="header" th:text="${blog.user.nickname}">汪峰</a>
+              <div class="row">
+                <div class="eleven wide column">
+                  <div class="ui mini horizontal link list">
+                    <div class="item">
+                      <img src="../static/images/icon.png" alt="" class="ui avatar image">
+                    </div>
+                    <div class="item">
+                      <div class="content">
+                        <a href="#" class="header" th:text="${blog.user.nickname}">汪峰</a>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <i class="calendar icon"></i> 2020-04-01
+                    </div>
+                    <div class="item">
+                      <i class="eye icon"></i> 6324
                     </div>
                   </div>
-                  <div class="item">
-                    <i class="calendar icon"></i> 2020-04-01
-                  </div>
-                  <div class="item">
-                    <i class="eye icon"></i> 6324
-                  </div>
+                </div>
+                <div class="right aligned five wide column">
+                  <a href="#" target="_blank" class="ui teal label basic m-padded-tiny m-text-thin" th:text="${blog.type.name}">
+                    烈马人
+                  </a>
                 </div>
               </div>
-              <div class="right aligned five wide column">
-                <a href="#" target="_blank" class="ui teal label basic m-padded-tiny m-text-thin" th:text="${blog.type.name}">
-                  烈马人
-                </a>
+              <div class="row">
+                <div class="column">
+                  <a href="#" class="ui mini basic teal left pointing label m-padded-mini m-text-thin">Java</a>
+                </div>
               </div>
             </div>
           </div>
@@ -210,28 +227,80 @@
             <h3 class="ui header">啊这。。你真的理解什么是财富自由吗</h3>
             <p class="m-text" th:text="|${blog.description}......|">风神了封神了，入魔了，魔怔了，正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
             <div class="ui stackable grid">
-              <div class="eleven wide column">
-                <div class="ui mini horizontal link list">
-                  <div class="item">
-                    <img src="../static/images/icon.png" alt="" class="ui avatar image">
-                  </div>
-                  <div class="item">
-                    <div class="content">
-                      <a href="#" class="header" th:text="${blog.user.nickname}">汪峰</a>
+              <div class="row">
+                <div class="eleven wide column">
+                  <div class="ui mini horizontal link list">
+                    <div class="item">
+                      <img src="../static/images/icon.png" alt="" class="ui avatar image">
+                    </div>
+                    <div class="item">
+                      <div class="content">
+                        <a href="#" class="header" th:text="${blog.user.nickname}">汪峰</a>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <i class="calendar icon"></i> 2020-04-01
+                    </div>
+                    <div class="item">
+                      <i class="eye icon"></i> 6324
                     </div>
                   </div>
-                  <div class="item">
-                    <i class="calendar icon"></i> 2020-04-01
-                  </div>
-                  <div class="item">
-                    <i class="eye icon"></i> 6324
-                  </div>
+                </div>
+                <div class="right aligned five wide column">
+                  <a href="#" target="_blank" class="ui teal label basic m-padded-tiny m-text-thin" th:text="${blog.type.name}">
+                    烈马人
+                  </a>
                 </div>
               </div>
-              <div class="right aligned five wide column">
-                <a href="#" target="_blank" class="ui teal label basic m-padded-tiny m-text-thin" th:text="${blog.type.name}">
-                  烈马人
-                </a>
+              <div class="row">
+                <div class="column">
+                  <a href="#" class="ui mini basic teal left pointing label m-padded-mini m-text-thin">Java</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="five wide column">
+            <a href="#" target="_blank"><img src="https://picsum.photos/id/1049/800/400" alt="" class="ui rounded image"></a>
+
+          </div>
+        </div>
+      </div>
+      <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear">
+        <div class="ui middle aligned mobile reversed stackable grid" th:each="blog : ${page.content}" >
+          <div class="eleven wide column">
+            <h3 class="ui header">啊这。。你真的理解什么是财富自由吗</h3>
+            <p class="m-text" th:text="|${blog.description}......|">风神了封神了，入魔了，魔怔了，正确做好任何一件事情的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已…...</p>
+            <div class="ui stackable grid">
+              <div class="row">
+                <div class="eleven wide column">
+                  <div class="ui mini horizontal link list">
+                    <div class="item">
+                      <img src="../static/images/icon.png" alt="" class="ui avatar image">
+                    </div>
+                    <div class="item">
+                      <div class="content">
+                        <a href="#" class="header" th:text="${blog.user.nickname}">汪峰</a>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <i class="calendar icon"></i> 2020-04-01
+                    </div>
+                    <div class="item">
+                      <i class="eye icon"></i> 6324
+                    </div>
+                  </div>
+                </div>
+                <div class="right aligned five wide column">
+                  <a href="#" target="_blank" class="ui teal label basic m-padded-tiny m-text-thin" th:text="${blog.type.name}">
+                    烈马人
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column">
+                  <a href="#" class="ui mini basic teal left pointing label m-padded-mini m-text-thin">Java</a>
+                </div>
               </div>
             </div>
           </div>
@@ -243,6 +312,7 @@
         </div>
       </div>
     </div>
+
     <div class="ui bottom attached segment">
       <div class="ui middle aligned two column grid">
         <div class="column">
