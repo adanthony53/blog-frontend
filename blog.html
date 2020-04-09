@@ -36,7 +36,7 @@
 </nav>
 
 <!--    Middle Content    -->
-<div class="m-container-small m-padded-tb-big animated fadeIn">
+<div id="waypoint" class="m-container-small m-padded-tb-big animated fadeIn">
   <div class="ui container">
     <!-- header -->
     <div class="ui top attached segment">
@@ -580,7 +580,7 @@ h5,h6{font-size:1em;}
   </div>
 </div>
 
-<div id="toolbar" class="m-padded m-fixed m-right-bottom" >
+<div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
   <div class="ui vertical icon buttons ">
     <button type="button" class="ui toc icon button"><i class="list icon"></i></button>
     <a href="#comment-container" class="ui icon button" ><i class="comment icon"></i></a>
@@ -590,7 +590,7 @@ h5,h6{font-size:1em;}
   </div>
 </div>
 
-<div class="ui toc-container flowing popup transition hidden" style="width: 250px;">
+<div class="ui toc-container flowing popup transition hidden" style="width: 250px!important;">
   <!-- build table of content -->
   <ol class="js-toc">
 
@@ -652,6 +652,7 @@ h5,h6{font-size:1em;}
 <script src="static/lib/prism/prism.js"></script>
 <script src="static/lib/tocbot/tocbot.min.js"></script>
 <script src="static/lib/qrcode/qrcode.min.js"></script>
+<script src="static/lib/waypoint/jquery.waypoints.js"></script>
 <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
 
 <script>
@@ -706,6 +707,18 @@ h5,h6{font-size:1em;}
     $('#toTop-button').click(function () {
         $(window).scrollTo(0,500);
     });
+
+    var waypoint = new Waypoint({
+        element: document.getElementById('waypoint'),
+        handler: function(direction) {
+            if (direction == 'down') {
+                $('#toolbar').show(200);
+            } else {
+                $('#toolbar').hide(500);
+            }
+            console.log('Scrolled to waypoint!  ' + direction);
+        }
+    })
 </script>
 </body>
 </html>
