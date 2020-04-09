@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/type.scc}" >
   <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.scc}" >
   <link rel="stylesheet" href="../static/lib/prism/prism.css">
+  <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">
   <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.scc}" >
 
 </head>
@@ -61,14 +62,14 @@
       <img src="https://picsum.photos/id/1049/800/400" alt="" class="ui fluid rounded image">
     </div>
     <!-- blog content  -->
-    <div class="ui attached segment">
+    <div class="ui attached padded segment">
       <div class="ui right aligned basic segment">
-        <div class="ui orange basic label" th:text="${blog.flag}">原创</div>
+        <div class="ui orange basic label" th:text="${blog.flag}">Original</div>
       </div>
       <br>
       <h2 class="ui center aligned header">关于刻意练习的清单</h2>
 
-      <div id="content" class="typo typo-selection m-padded-lr-responsive m-padded-tb-large">
+      <div id="content" class="typo typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large">
         <h2 id="section1">一、关于 <i class="serif">Typo.css</i></h2>
 
         <pre><code class="language-css">p { color: red }</code></pre>
@@ -477,8 +478,8 @@ h5,h6{font-size:1em;}
       </div>
     </div>
     <!-- comment section  -->
-    <div class="ui bottom attached segment">
-      <div id="comment-container" class="ui teal segment">
+    <div id="comment-container" class="ui bottom attached segment">
+      <div  class="ui teal segment">
         <div class="ui threaded comments">
           <h3 class="ui dividing header">Comments</h3>
           <div class="comment">
@@ -579,6 +580,22 @@ h5,h6{font-size:1em;}
   </div>
 </div>
 
+<div id="toolbar" class="m-padded m-fixed m-right-bottom" >
+  <div class="ui vertical icon buttons ">
+    <button type="button" class="ui toc icon button"><i class="list icon"></i></button>
+    <a href="#comment-container" class="ui icon button" ><i class="comment icon"></i></a>
+    <button class="ui github icon button"><i class="github icon"></i></button>
+    <a href="#" class="ui icon button" ><i class="chevron up icon"></i></a>
+  </div>
+</div>
+
+<div class="ui toc-container flowing popup transition hidden" style="width: 250px;">
+  <!-- build table of content -->
+  <ol class="js-toc">
+
+  </ol>
+</div>
+
 <br>
 <br>
 <br>
@@ -628,6 +645,7 @@ h5,h6{font-size:1em;}
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
 
 <script src="../static/lib/prism/prism.js"></script>
+<script src="../static/lib/tocbot/tocbot.min.js"></script>
 
 <script>
     $('.menu.toggle').click(function () {
@@ -638,6 +656,21 @@ h5,h6{font-size:1em;}
         popup : $('.payQR.popup'),
         on : 'click',
         position: 'bottom center'
+    });
+
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+    });
+
+    $('.toc.button').popup({
+        popup : $('.toc-container.popup'),
+        on : 'click',
+        position: 'left center'
     });
 </script>
 </body>
